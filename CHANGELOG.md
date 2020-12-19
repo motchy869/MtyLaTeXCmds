@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [0.3.0]
+
+- Added parenthesis for `tr` function.
+
 ## [0.2.0] - 2020/11/28
 
 - Improved the style of `sgn` function by using `mathoperator` rather than using `mathrm`.
