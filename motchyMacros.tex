@@ -1,3 +1,5 @@
+\usepackage{mathtools}
+
 %Latex
 	%現在の見出し番号を返す
 	\newcommand{\getTitleNum}{%「%」で改行文字をコメントアウト
@@ -22,7 +24,7 @@
 		%汎用
 		\newcommand{\as}{{\quad\textrm{as}\quad}}
 		\newcommand{\st}{{\textrm{ s.t. }}}
-		\newcommand{\set}[2]{\left\{\left.#1\;\right|\;#2\right\}}
+		\DeclarePairedDelimiterX{\set}[2]{\lbrace}{\rbrace}{#1\,\delimsize\vert\,#2}
 		\newcommand{\naturalNumbers}{\mathbb{N}}
 		\newcommand{\integers}{\mathbb{Z}}
 		\newcommand{\rationalNumbers}{\mathbb{Q}}

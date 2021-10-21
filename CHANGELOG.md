@@ -5,10 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unreleased
+
+- Improved `\set` command appearance using `mathtools`'s `DeclarePairedDelimiterX`.
+
 ## [0.4.1]
 
-- Fix `\range` command. Replaced `\cdots` with `\dotsc`.
-- Change linefeed code from CR+LF to LF
+- Fixed `\range` command. Replaced `\cdots` with `\dotsc`.
+- Changed linefeed code from CR+LF to LF
 
 ## [0.4.0]
 
