@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unreleased
 
 - Improved `\set` command appearance using `mathtools`'s `DeclarePairedDelimiterX`.
+- Improved `\Pr` command appearance; replace braces with parenthesis.
+- Improved `\cPr` command delimiter size control using `mathtools`'s `DeclarePairedDelimiterX`.
 
 ## [0.4.1]
 
