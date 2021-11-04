@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Improved `\set` command appearance using `mathtools`'s `DeclarePairedDelimiterX`.
 - Improved `\Pr` command appearance; replace braces with parenthesis.
 - Improved `\cPr` command delimiter size control using `mathtools`'s `DeclarePairedDelimiterX`.
+- Added commands for Hadamard product and division
 
 ## [0.4.1]
 
