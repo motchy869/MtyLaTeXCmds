@@ -11,7 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Improved `\Pr` command appearance; replace braces with parenthesis.
 - Improved `\cPr` command delimiter size control using `mathtools`'s `DeclarePairedDelimiterX`.
 - Added commands for Hadamard product and division
-- Added `\inlineCode` command.
 
 ## [0.4.1]
 
