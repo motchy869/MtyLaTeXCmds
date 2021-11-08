@@ -71,7 +71,8 @@
 			\newcommand{\partDerivIIHetero}[3]{\frac{\operatorname{\partial}^2#1}{\partial#2\operatorname{\partial}#3}}
 			\newcommand{\partDerivIIHeteroLong}[3]{{\frac{\operatorname{\partial}^2}{\partial#2\operatorname{\partial}#3}#1}}
 			%積分
-			\newcommand{\integ}[4]{\int_{#1}^{#2}{#3}\mathrm{d}#4}
+			\newcommand{\integ}[4]{\int_{#1}^{#2}{#3}\mathrm{d}#4 \PackageWarning{LaTeX-motchyMacros}{command integ is deprecated. Use integral instead.}}
+			\newcommand{\integrate}[5]{\int_{#1}^{#2}{#3}{\mathrm{d}^{#4}}#5}
 			\newcommand{\LebInteg}[4]{\int_{#1} {#2} {#3}\left(\mathrm{d}#4\right)}
 
 		%複素解析
