@@ -13,17 +13,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added commands for Hadamard product and division
 - Added `\integrate` command, and deprecated `\integ` command.
 
-## [0.4.1]
+## [0.4.1] - 2021-10-20
 
 - Fixed `\range` command. Replaced `\cdots` with `\dotsc`.
 - Changed linefeed code from CR+LF to LF
 
-## [0.4.0]
+## [0.4.0] - 2021-06-30
 
 - Added `partDerivIIHeteroLong` command.
 - Added `argmin` command.
 
-## [0.3.0]
+## [0.3.0] - 2020-12-19
 
 - Added parenthesis for `tr` function.
 
