@@ -7,7 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
-- Delete `\integ` command.
+- Deleted `\integ` command.
+- Added `erf` command.
 
 ## [0.5.0] - 2021-11-11
 
