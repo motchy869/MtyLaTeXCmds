@@ -1,7 +1,7 @@
 \usepackage{mathtools}
 
-%Latex
-	%現在の見出し番号を返す
+% Latex
+	% 現在の見出し番号を返す
 	\newcommand{\getTitleNum}{%「%」で改行文字をコメントアウト
 		\ifthenelse{\arabic{chapter}=0}{\thepart}{%
 			\ifthenelse{\arabic{section}=0}{\thechapter}{%
@@ -13,15 +13,15 @@
 			}%
 		}%
 	}
-	%textcolorの色
+	% textcolorの色
 	\definecolor{darkpastelgreen}{rgb}{0.01, 0.75, 0.24}
 
-%自然科学
-	%汎用
+% 自然科学
+	% 汎用
 	\newcommand{\ctext}[1]{\raise0.2ex\hbox{\textcircled{\scriptsize{#1}}}}
 
-	%数学
-		%汎用
+	% 数学
+		% 汎用
 		\newcommand{\as}{{\quad\textrm{as}\quad}}
 		\newcommand{\st}{{\textrm{ s.t. }}}
 		\DeclarePairedDelimiterX{\set}[2]{\lbrace}{\rbrace}{#1\,\delimsize\vert\,#2}
@@ -35,19 +35,19 @@
 		\newcommand{\argmax}{\mathop{\textrm{arg~max}}}
 		\newcommand{\argmin}{\mathop{\textrm{arg~min}}}
 
-		%集合論
+		% 集合論
 		\newcommand{\range}[2]{\{#1,\dotsc,#2\}}
 		\renewcommand{\complement}{\mathrm{c}}
 		\newcommand{\ind}[2]{\mathbbm{1}_{#1}\left(#2\right)}
 		\newcommand{\indII}[1]{\mathbbm{1}\left\{#1\right\}}
 
-		%数論
+		% 数論
 		\newcommand{\abs}[1]{\left|#1\right|}
 		\newcommand{\combi}[2]{{_{#1}\mathrm{C}_{#2}}}
 		\newcommand{\perm}[2]{{_{#1}\mathrm{P}_{#2}}}
 		\newcommand{\GaloisField}[1]{\mathrm{GF}\left(#1\right)}
 
-		%解析学
+		% 解析学
 		\newcommand{\sgn}[1]{\operatorname{sgn}\left(#1\right)}
 		\newcommand{\cl}[1]{\operatorname{cl}#1}
 		\newcommand{\Img}[1]{\operatorname{Img}\left(#1\right)}
@@ -59,33 +59,33 @@
 		\newcommand{\sinc}{\mathop{\mathrm{sinc}}}
 		\newcommand{\GammaFunc}[1]{\Gamma\left(#1\right)}
 		\newcommand{\erf}{\mathop{\mathrm{erf}}}
-			%逆三角関数
+			% 逆三角関数
 			\newcommand{\asin}[1]{\operatorname{Sin}^{-1}{#1}}
 			\newcommand{\acos}[1]{\operatorname{Cos}^{-1}{#1}}
 			\newcommand{\atan}[1]{\operatorname{{Tan}^{-1}}{#1}}
 			\newcommand{\atanEx}[2]{\atan{\left(#1,#2\right)}}
-			%微分
+			% 微分
 			\newcommand{\deriv}[3]{\frac{\operatorname{d}^{#3}#1}{\operatorname{d}{#2}^{#3}}}
 			\newcommand{\derivLong}[3]{\frac{\operatorname{d}^{#3}}{\operatorname{d}{#2}^{#3}}#1}
 			\newcommand{\partDeriv}[3]{\frac{\operatorname{\partial}^{#3}#1}{\operatorname{\partial}{#2}^{#3}}}
 			\newcommand{\partDerivLong}[3]{\frac{\operatorname{\partial}^{#3}}{\operatorname{\partial}{#2}^{#3}}#1}
 			\newcommand{\partDerivIIHetero}[3]{\frac{\operatorname{\partial}^2#1}{\partial#2\operatorname{\partial}#3}}
 			\newcommand{\partDerivIIHeteroLong}[3]{{\frac{\operatorname{\partial}^2}{\partial#2\operatorname{\partial}#3}#1}}
-			%積分
+			% 積分
 			\newcommand{\integrate}[5]{\int_{#1}^{#2}{#3}{\mathrm{d}^{#4}}#5}
 			\newcommand{\LebInteg}[4]{\int_{#1} {#2} {#3}\left(\mathrm{d}#4\right)}
 
-		%複素解析
+		% 複素解析
 		\newcommand{\conj}[1]{\overline{#1}}
 		\renewcommand{\Re}[1]{{\operatorname{Re}{\left(#1\right)}}}
 		\renewcommand{\Im}[1]{{\operatorname{Im}{\left(#1\right)}}}
 		\newcommand{\Arg}[1]{\operatorname{Arg}{\left({#1}\right)}}
 		\newcommand{\Log}[1]{\operatorname{Log}{#1}}
-			%ラプラス変換
+			% ラプラス変換
 			\newcommand{\LPLC}[1]{\operatorname{\mathcal{L}}\left[#1\right]}
 			\newcommand{\ILPLC}[1]{\operatorname{\mathcal{L}}^{-1}\left[#1\right]}
 
-		%線形代数
+		% 線形代数
 		\newcommand{\bm}[1]{{\boldsymbol{#1}}}
 		\newcommand{\matEntry}[3]{#1\left[#2\right]\left[#3\right]}
 		\newcommand{\matPart}[5]{\matEntry{#1}{#2:#3}{#4:#5}}
@@ -97,13 +97,13 @@
 		\newcommand{\Span}[1]{\operatorname{span}\left[#1\right]}
 		\newcommand{\Ker}[1]{\operatorname{Ker}\left(#1\right)}
 		\newcommand{\rank}[1]{\operatorname{rank}\left(#1\right)}
-			%ベクトル
-				%単位ベクトル
+			% ベクトル
+				%単 位ベクトル
 				\newcommand{\vix}{\bm{i}_x}
 				\newcommand{\viy}{\bm{i}_y}
 				\newcommand{\viz}{\bm{i}_z}
 
-		%確率論
+		% 確率論
 		\newcommand{\PDF}[2]{\operatorname{PDF}\left[#1,\;#2\right]}
 		\newcommand{\Ber}[1]{\operatorname{Ber}\left(#1\right)}
 		\newcommand{\Beta}[2]{\operatorname{Beta}\left(#1,#2\right)}
@@ -121,10 +121,10 @@
 		\newcommand{\Cov}[2]{\operatorname{Cov}\left[#1,#2\right]}
 		\newcommand{\CovMat}[1]{\operatorname{Cov}\left[#1\right]}
 
-		%グラフ理論
+		% グラフ理論
 		\newcommand{\neighborhood}{\mathcal{N}}
 
-		%プログラミング
+		% プログラミング
 		\newcommand{\plpl}{\mathrel{++}}
 		\newcommand{\pleq}{\mathrel{+}=}
 		\newcommand{\asteq}{\mathrel{*}=}
