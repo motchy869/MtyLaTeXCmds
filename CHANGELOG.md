@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Changed:
   - Renamed `\cPrParen` to `\cPrParens`
+- Added:
+  - new command `\parens`
 
 ## [0.7.0] - 2022-06-23
 
