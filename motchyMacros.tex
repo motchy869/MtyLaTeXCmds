@@ -22,6 +22,7 @@
 
 	% 数学
 		% 汎用
+		\DeclarePairedDelimiterX{\parens}[1]{\lparen}{\rparen}{#1}
 		\newcommand{\as}{{\quad\textrm{as}\quad}}
 		\newcommand{\st}{{\textrm{ s.t. }}}
 		\DeclarePairedDelimiterX{\set}[2]{\lbrace}{\rbrace}{#1\,\delimsize\vert\,#2}
@@ -117,8 +118,8 @@
 		\newcommand{\GammaDist}[2]{\operatorname{Gamma}\left(#1,#2\right)}
 		\newcommand{\cind}[2]{\ind{#1\left| #2\right.}}	%条件付き指示関数
 		\renewcommand{\Pr}[1]{\operatorname{Pr}\left(#1\right)}
-		\DeclarePairedDelimiterX{\cPrParen}[2]{(}{)}{#1\,\delimsize\vert\,#2}
-		\newcommand{\cPr}[2]{\operatorname{Pr}\cPrParen{#1}{#2}}
+		\DeclarePairedDelimiterX{\cPrParens}[2]{(}{)}{#1\,\delimsize\vert\,#2}
+		\newcommand{\cPr}[2]{\operatorname{Pr}\cPrParens{#1}{#2}}
 		\newcommand{\E}[2]{\operatorname{E}_{#1}\left[#2\right]}
 		\newcommand{\cE}[3]{\E{#1}{\left.#2\right|#3}}
 		\newcommand{\Var}[2]{\operatorname{Var}_{#1}\left[#2\right]}
