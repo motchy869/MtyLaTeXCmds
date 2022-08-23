@@ -38,7 +38,7 @@
 
 		% 集合論
 		\newcommand{\range}[2]{\{#1,\dotsc,#2\}}
-		\renewcommand{\complement}{\mathrm{c}}
+		\providecommand{\complement}{}\renewcommand{\complement}{\mathrm{c}}
 		\newcommand{\ind}[2]{\mathbbm{1}_{#1}\left(#2\right)}
 		\newcommand{\indII}[1]{\mathbbm{1}\left\{#1\right\}}
 
@@ -80,8 +80,8 @@
 
 		% 複素解析
 		\newcommand{\conj}[1]{\overline{#1}}
-		\renewcommand{\Re}[1]{{\operatorname{Re}{\left(#1\right)}}}
-		\renewcommand{\Im}[1]{{\operatorname{Im}{\left(#1\right)}}}
+		\providecommand{\Re}{}\renewcommand{\Re}[1]{{\operatorname{Re}{\left(#1\right)}}}
+		\providecommand{\Im}{}\renewcommand{\Im}[1]{{\operatorname{Im}{\left(#1\right)}}}
 		\newcommand{\Arg}[1]{\operatorname{Arg}{\left({#1}\right)}}
 		\newcommand{\Log}[1]{\operatorname{Log}{#1}}
 			% ラプラス変換
@@ -117,7 +117,7 @@
 		\newcommand{\PoissonDist}[1]{\operatorname{PoissonDist}\left(#1\right)}
 		\newcommand{\GammaDist}[2]{\operatorname{Gamma}\left(#1,#2\right)}
 		\newcommand{\cind}[2]{\ind{#1\left| #2\right.}}	%条件付き指示関数
-		\renewcommand{\Pr}[1]{\operatorname{Pr}\left(#1\right)}
+		\providecommand{\Pr}{}\renewcommand{\Pr}[1]{\operatorname{Pr}\left(#1\right)}
 		\DeclarePairedDelimiterX{\cPrParens}[2]{(}{)}{#1\,\delimsize\vert\,#2}
 		\newcommand{\cPr}[2]{\operatorname{Pr}\cPrParens{#1}{#2}}
 		\newcommand{\E}[2]{\operatorname{E}_{#1}\left[#2\right]}
