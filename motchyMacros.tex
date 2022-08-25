@@ -1,3 +1,4 @@
+\usepackage{listingsutf8, jvlisting}
 \usepackage{mathtools}
 
 % Latex
@@ -129,7 +130,8 @@
 		% グラフ理論
 		\newcommand{\neighborhood}{\mathcal{N}}
 
-		% プログラミング
-		\newcommand{\plpl}{\mathrel{++}}
-		\newcommand{\pleq}{\mathrel{+}=}
-		\newcommand{\asteq}{\mathrel{*}=}
+	% プログラミング
+	\newcommand{\plpl}{\mathrel{++}}
+	\newcommand{\pleq}{\mathrel{+}=}
+	\newcommand{\asteq}{\mathrel{*}=}
+	\newcommand{\inlineCode}[1]{\lstinline[inputencoding=utf8, basicstyle=\ttfamily]|#1|}
