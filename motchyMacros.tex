@@ -1,3 +1,4 @@
+\usepackage{ifluatex}
 \usepackage{listingsutf8, jvlisting}
 \usepackage{mathtools}
 
@@ -131,8 +132,12 @@
 		% グラフ理論
 		\newcommand{\neighborhood}{\mathcal{N}}
 
-	% プログラミング
-	\newcommand{\plpl}{\mathrel{++}}
-	\newcommand{\pleq}{\mathrel{+}=}
-	\newcommand{\asteq}{\mathrel{*}=}
-	\newcommand{\inlineCode}[1]{\lstinline[inputencoding=utf8, basicstyle=\ttfamily]|#1|}
+    % プログラミング
+    \newcommand{\plpl}{\mathrel{++}}
+    \newcommand{\pleq}{\mathrel{+}=}
+    \newcommand{\asteq}{\mathrel{*}=}
+    \ifluatex
+        \newcommand{\inlineCode}[1]{\lstinline[basicstyle=\ttfamily]|#1|}
+    \else
+        \newcommand{\inlineCode}[1]{\lstinline[inputencoding=utf8, basicstyle=\ttfamily]|#1|}
+    \fi
