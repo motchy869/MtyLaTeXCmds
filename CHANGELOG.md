@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Replaced `[]` with `()` in `LPLC` and `ILPLC` commands.
 - Improved:
   - Avoided input encoding warning about `\inlineCode` command when compiling with LuaLaTeX.
+- Added:
+  - `ZTrans` and `IZTrans` commands
 
 ## [0.10.0]
 
