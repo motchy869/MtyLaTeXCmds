@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Improved:
   - Avoided input encoding warning about `\inlineCode` command when compiling with LuaLaTeX.
 - Added:
+  - `braces` and `bracks` commands.
   - `ZTrans` and `IZTrans` commands
 
 ## [0.10.0]
