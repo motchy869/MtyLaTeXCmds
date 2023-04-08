@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Changed:
   - Replaced `[]` with `()` in `LPLC` and `ILPLC` commands.
+  - Renamed `\setParens` command with `setComprehension` command.
 - Improved:
   - Avoided input encoding warning about `\inlineCode` command when compiling with LuaLaTeX.
 - Added:
