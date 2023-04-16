@@ -27,6 +27,8 @@
         \DeclarePairedDelimiterX{\parens}[1]{\lparen}{\rparen}{#1}
         \DeclarePairedDelimiterX{\braces}[1]{\lbrace}{\rbrace}{#1}
         \DeclarePairedDelimiterX{\bracks}[1]{\lbrack}{\rbrack}{#1}
+        \DeclarePairedDelimiterX{\verts}[1]{|}{|}{#1}
+        \DeclarePairedDelimiterX{\Verts}[1]{\|}{\|}{#1}
         \newcommand{\as}{{\quad\textrm{as}\quad}}
         \newcommand{\st}{{\textrm{ s.t. }}}
         \DeclarePairedDelimiterX{\setComprehension}[2]{\lbrace}{\rbrace}{#1\,\delimsize\vert\,#2}
@@ -36,40 +38,40 @@
         \newcommand{\realNumbers}{\mathbb{R}}
         \newcommand{\complexNumbers}{\mathbb{C}}
         \newcommand{\field}{\mathbb{F}}
-        \newcommand{\func}[2]{{#1}\left({#2}\right)}
+        \newcommand{\func}[2]{{#1}\parens*{#2}}
         \newcommand{\argmax}{\mathop{\textrm{arg~max}}}
         \newcommand{\argmin}{\mathop{\textrm{arg~min}}}
 
         % 集合論
-        \newcommand{\range}[2]{\{#1,\dotsc,#2\}}
+        \newcommand{\range}[2]{\braces*{#1,\dotsc,#2}}
         \providecommand{\complement}{}\renewcommand{\complement}{\mathrm{c}}
-        \newcommand{\ind}[2]{\mathbbm{1}_{#1}\left(#2\right)}
-        \newcommand{\indII}[1]{\mathbbm{1}\left\{#1\right\}}
+        \newcommand{\ind}[2]{\mathbbm{1}_{#1}\parens*{#2}}
+        \newcommand{\indII}[1]{\mathbbm{1}\braces*{#1}}
 
         % 数論
-        \newcommand{\abs}[1]{\left|#1\right|}
+        \newcommand{\abs}[1]{\verts*{#1}}
         \newcommand{\combi}[2]{{_{#1}\mathrm{C}_{#2}}}
         \newcommand{\perm}[2]{{_{#1}\mathrm{P}_{#2}}}
-        \newcommand{\GaloisField}[1]{\mathrm{GF}\left(#1\right)}
+        \newcommand{\GaloisField}[1]{\mathrm{GF}\parens*{#1}}
 
         % 解析学
         \newcommand{\NapierE}{\mathrm{e}}
-        \newcommand{\sgn}[1]{\operatorname{sgn}\left(#1\right)}
+        \newcommand{\sgn}[1]{\operatorname{sgn}\parens*{#1}}
         \newcommand{\cl}[1]{\operatorname{cl}#1}
-        \newcommand{\Img}[1]{\operatorname{Img}\left(#1\right)}
-        \newcommand{\dom}[1]{\operatorname{dom}\left(#1\right)}
-        \newcommand{\norm}[1]{\left\|#1\right\|}
+        \newcommand{\Img}[1]{\operatorname{Img}\parens*{#1}}
+        \newcommand{\dom}[1]{\operatorname{dom}\parens*{#1}}
+        \newcommand{\norm}[1]{\Verts*{#1}}
         \newcommand{\floor}[1]{\left\lfloor#1\right\rfloor}
         \newcommand{\ceil}[1]{\left\lceil#1\right\rceil}
-        \newcommand{\expo}[1]{\exp\left(#1\right)}
+        \newcommand{\expo}[1]{\exp\parens*{#1}}
         \newcommand{\sinc}{\mathop{\mathrm{sinc}}}
-        \newcommand{\GammaFunc}[1]{\Gamma\left(#1\right)}
+        \newcommand{\GammaFunc}[1]{\Gamma\parens*{#1}}
         \newcommand{\erf}{\mathop{\mathrm{erf}}}
             % 逆三角関数
             \newcommand{\asin}[1]{\operatorname{Sin}^{-1}{#1}}
             \newcommand{\acos}[1]{\operatorname{Cos}^{-1}{#1}}
             \newcommand{\atan}[1]{\operatorname{{Tan}^{-1}}{#1}}
-            \newcommand{\atanEx}[2]{\atan{\left(#1,#2\right)}}
+            \newcommand{\atanEx}[2]{\atan{\parens*{#1,#2}}}
             % 畳み込み
             \newcommand{\cycConv}[2]{{#1}\underset{\text{cyc}}{*}{#2}}
             % 微分
@@ -81,35 +83,35 @@
             \newcommand{\partDerivIIHeteroLong}[3]{{\frac{\operatorname{\partial}^2}{\partial#2\operatorname{\partial}#3}#1}}
             % 積分
             \newcommand{\integrate}[5]{\int_{#1}^{#2}{#3}{\mathrm{d}^{#4}}#5}
-            \newcommand{\LebInteg}[4]{\int_{#1} {#2} {#3}\left(\mathrm{d}#4\right)}
+            \newcommand{\LebInteg}[4]{\int_{#1} {#2} {#3}\parens*{\mathrm{d}#4}}
 
         % 複素解析
         \newcommand{\conj}[1]{\overline{#1}}
-        \providecommand{\Re}{}\renewcommand{\Re}[1]{{\operatorname{Re}{\left(#1\right)}}}
-        \providecommand{\Im}{}\renewcommand{\Im}[1]{{\operatorname{Im}{\left(#1\right)}}}
-        \newcommand{\Arg}[1]{\operatorname{Arg}{\left({#1}\right)}}
+        \providecommand{\Re}{}\renewcommand{\Re}[1]{{\operatorname{Re}{\parens*{#1}}}}
+        \providecommand{\Im}{}\renewcommand{\Im}[1]{{\operatorname{Im}{\parens*{#1}}}}
+        \newcommand{\Arg}[1]{\operatorname{Arg}{\parens*{#1}}}
         \newcommand{\Log}[1]{\operatorname{Log}{#1}}
             % ラプラス変換
-            \newcommand{\LPLC}[1]{\operatorname{\mathcal{L}}\left(#1\right)}
-            \newcommand{\ILPLC}[1]{\operatorname{\mathcal{L}}^{-1}\left(#1\right)}
+            \newcommand{\LPLC}[1]{\operatorname{\mathcal{L}}\parens*{#1}}
+            \newcommand{\ILPLC}[1]{\operatorname{\mathcal{L}}^{-1}\parens*{#1}}
             % 離散Fourier変換
-            \newcommand{\DFT}[1]{\mathrm{DFT}\left(#1\right)}
+            \newcommand{\DFT}[1]{\mathrm{DFT}\parens*{#1}}
             % Z変換
-            \newcommand{\ZTrans}[1]{\operatorname{\mathcal{Z}}\left(#1\right)}
-            \newcommand{\IZTrans}[1]{\operatorname{\mathcal{Z}}^{-1}\left(#1\right)}
+            \newcommand{\ZTrans}[1]{\operatorname{\mathcal{Z}}\parens*{#1}}
+            \newcommand{\IZTrans}[1]{\operatorname{\mathcal{Z}}^{-1}\parens*{#1}}
 
         % 線形代数
         \newcommand{\bm}[1]{{\boldsymbol{#1}}}
-        \newcommand{\matEntry}[3]{#1\left[#2\right]\left[#3\right]}
+        \newcommand{\matEntry}[3]{#1\bracks*{#2}\bracks*{#3}}
         \newcommand{\matPart}[5]{\matEntry{#1}{#2:#3}{#4:#5}}
-        \newcommand{\diag}[1]{\operatorname{diag}\left(#1\right)}
-        \newcommand{\tr}[1]{\operatorname{tr}{\left(#1\right)}}
+        \newcommand{\diag}[1]{\operatorname{diag}\parens*{#1}}
+        \newcommand{\tr}[1]{\operatorname{tr}{\parens*{#1}}}
         \newcommand{\inprod}[2]{\left\langle#1,#2\right\rangle}
         \newcommand{\HadamardProd}{\odot}
         \newcommand{\HadamardDiv}{\oslash}
-        \newcommand{\Span}[1]{\operatorname{span}\left[#1\right]}
-        \newcommand{\Ker}[1]{\operatorname{Ker}\left(#1\right)}
-        \newcommand{\rank}[1]{\operatorname{rank}\left(#1\right)}
+        \newcommand{\Span}[1]{\operatorname{span}\bracks*{#1}}
+        \newcommand{\Ker}[1]{\operatorname{Ker}\parens*{#1}}
+        \newcommand{\rank}[1]{\operatorname{rank}\parens*{#1}}
             % ベクトル
                 %単 位ベクトル
                 \newcommand{\vix}{\bm{i}_x}
@@ -117,22 +119,22 @@
                 \newcommand{\viz}{\bm{i}_z}
 
         % 確率論
-        \newcommand{\PDF}[2]{\operatorname{PDF}\left[#1,\;#2\right]}
-        \newcommand{\Ber}[1]{\operatorname{Ber}\left(#1\right)}
-        \newcommand{\Beta}[2]{\operatorname{Beta}\left(#1,#2\right)}
-        \newcommand{\ExpDist}[1]{\operatorname{ExpDist}\left(#1\right)}
-        \newcommand{\ErlangDist}[2]{\operatorname{ErlangDist}\left(#1,#2\right)}
-        \newcommand{\PoissonDist}[1]{\operatorname{PoissonDist}\left(#1\right)}
-        \newcommand{\GammaDist}[2]{\operatorname{Gamma}\left(#1,#2\right)}
+        \newcommand{\PDF}[2]{\operatorname{PDF}\bracks*{#1,\;#2}}
+        \newcommand{\Ber}[1]{\operatorname{Ber}\parens*{#1}}
+        \newcommand{\Beta}[2]{\operatorname{Beta}\parens*{#1,#2}}
+        \newcommand{\ExpDist}[1]{\operatorname{ExpDist}\parens*{#1}}
+        \newcommand{\ErlangDist}[2]{\operatorname{ErlangDist}\parens*{#1,#2}}
+        \newcommand{\PoissonDist}[1]{\operatorname{PoissonDist}\parens*{#1}}
+        \newcommand{\GammaDist}[2]{\operatorname{Gamma}\parens*{#1,#2}}
         \newcommand{\cind}[2]{\ind{#1\left| #2\right.}}	%条件付き指示関数
-        \providecommand{\Pr}{}\renewcommand{\Pr}[1]{\operatorname{Pr}\left(#1\right)}
+        \providecommand{\Pr}{}\renewcommand{\Pr}[1]{\operatorname{Pr}\parens*{#1}}
         \DeclarePairedDelimiterX{\cPrParens}[2]{(}{)}{#1\,\delimsize\vert\,#2}
         \newcommand{\cPr}[2]{\operatorname{Pr}\cPrParens{#1}{#2}}
-        \newcommand{\E}[2]{\operatorname{E}_{#1}\left[#2\right]}
+        \newcommand{\E}[2]{\operatorname{E}_{#1}\bracks*{#2}}
         \newcommand{\cE}[3]{\E{#1}{\left.#2\right|#3}}
-        \newcommand{\Var}[2]{\operatorname{Var}_{#1}\left[#2\right]}
-        \newcommand{\Cov}[2]{\operatorname{Cov}\left[#1,#2\right]}
-        \newcommand{\CovMat}[1]{\operatorname{Cov}\left[#1\right]}
+        \newcommand{\Var}[2]{\operatorname{Var}_{#1}\bracks*{#2}}
+        \newcommand{\Cov}[2]{\operatorname{Cov}\bracks*{#1,#2}}
+        \newcommand{\CovMat}[1]{\operatorname{Cov}\bracks*{#1}}
 
         % グラフ理論
         \newcommand{\neighborhood}{\mathcal{N}}
