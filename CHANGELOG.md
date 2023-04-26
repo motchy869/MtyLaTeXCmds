@@ -5,7 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.11.0]
+## [0.11.1] - 2023-04-26
+
+- Fixed:
+  - warning about `listingsutf8` package
+
+## [0.11.0] - 2023-04-11
 
 - Changed:
   - Replaced `[]` with `()` in `LPLC` and `ILPLC` commands.
@@ -16,12 +21,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `braces` and `bracks` commands.
   - `ZTrans` and `IZTrans` commands
 
-## [0.10.0]
+## [0.10.0] -2023-03-25
 
 - Improved:
   - Renamed `\set` to `\setParens` in order to avoid conflict with `braket` package's `\set` command.
 
-## [0.9.0]
+## [0.9.0] - 2022-09-27
 
 - Added:
   - new command `\inlineCode`
