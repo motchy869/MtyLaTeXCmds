@@ -8,7 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 - Deleted:
-  - Deleted `expo` command.
+  - `expo` command
+- Added:
+  - `PrincipalValue` command
 
 ## [0.11.1] - 2023-04-26
 
