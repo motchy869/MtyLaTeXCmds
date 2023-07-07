@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Deleted:
   - `expo` command
 - Added:
-  - `PrincipalValue`, `\rect`, `\nsinc` command
+  - `PrincipalValue`, `\rect`, `\nsinc`, `escapeUnderscore` command
 
 ## [0.11.1] - 2023-04-26
 
