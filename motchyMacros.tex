@@ -18,6 +18,11 @@
     % textcolorの色
     \definecolor{darkpastelgreen}{rgb}{0.01, 0.75, 0.24}
 
+    \makeatletter
+    \newcommand*{\@escapeUnderscore}[1]{#1\endgroup}
+    \newcommand{\escapeUnderscore}{\begingroup\@makeother\_\@escapeUnderscore}
+    \makeatother
+
 % 自然科学
     % 汎用
     \newcommand{\ctext}[1]{\raise0.2ex\hbox{\textcircled{\scriptsize{#1}}}}
