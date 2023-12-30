@@ -1,3 +1,3 @@
 # LaTeX-motchyMacros
 
-My LaTeX macros used in various private projects.
+My LaTeX macros used in my projects.
