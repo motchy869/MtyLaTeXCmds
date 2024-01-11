@@ -3,8 +3,8 @@
 \usepackage{mathtools}
 
 % Latex
-    % 現在の見出し番号を返す
-    \newcommand{\getTitleNum}{%「%」で改行文字をコメントアウト
+    % Obtain current head number.
+    \newcommand{\getTitleNum}{% "%" comments out the line-break
         \ifthenelse{\arabic{chapter}=0}{\thepart}{%
             \ifthenelse{\arabic{section}=0}{\thechapter}{%
                 \ifthenelse{\arabic{subsection}=0}{\thesection}{%
@@ -15,9 +15,10 @@
             }%
         }%
     }
-    % textcolorの色
+    % new color for \textcolor command
     \definecolor{darkpastelgreen}{rgb}{0.01, 0.75, 0.24}
 
+    % Escape underscore.
     \makeatletter
     \newcommand*{\@escapeUnderscore}[1]{#1\endgroup}
     \newcommand{\escapeUnderscore}{\begingroup\@makeother\_\@escapeUnderscore}
