@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Changed:
+  - Replaced `newcommand` with `newcommand*` (see [What's the difference between \newcommand and \newcommand*?](https://tex.stackexchange.com/questions/1050/whats-the-difference-between-newcommand-and-newcommand))
 - Added:
   - `transpose`, `HerConj` command
 
