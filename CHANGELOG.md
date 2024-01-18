@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.13.0] - 2024-01-18
 
 - Changed:
   - Replaced `newcommand` with `newcommand*` (see [What's the difference between \newcommand and \newcommand*?](https://tex.stackexchange.com/questions/1050/whats-the-difference-between-newcommand-and-newcommand))
