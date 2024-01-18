@@ -19,10 +19,15 @@
     \definecolor{darkpastelgreen}{rgb}{0.01, 0.75, 0.24}
 
     % Escape underscore.
-    \makeatletter
-    \newcommand*{\@escapeUnderscore}[1]{#1\endgroup}
-    \newcommand*{\escapeUnderscore}{\begingroup\@makeother\_\@escapeUnderscore}
-    \makeatother
+    % ---------- (deprecated at 2024-01-18) ----------
+    % \makeatletter
+    % \newcommand*{\@escapeUnderscore}[1]{#1\endgroup}
+    % \newcommand*{\escapeUnderscore}{\begingroup\@makeother\_\@escapeUnderscore}
+    % \makeatother
+    % --------------------
+    % ---------- (added at 2024-01-18) ----------
+    \newcommand{\escapeUnderscore}[1]{\StrSubstitute{#1}{_}{\_\allowbreak}} % \allowbreak prevents overfull at table cell.
+    % --------------------
 
 % 自然科学
     % 汎用
