@@ -1,8 +1,32 @@
 \usepackage{ifluatex}
 \usepackage{listings, jvlisting}
 \usepackage{mathtools}
+\usepackage{xstring}
 
 % Latex
+    % The last definition of the command is applied across all pages.
+    % see [Using later defined macro values](https://tex.stackexchange.com/questions/248076/using-later-defined-macro-values)
+    \makeatletter
+    % Reserve command name. The command must be pre-defined in advance of first use.
+    \newcommand*{\rsvDef}[1]{%
+        \providecommand{#1}{%
+            \begingroup%
+                \def\tempString{The command `\string#1' is not fully defined in .aux file yet. Compile one more time.}%
+                \textcolor{red}{\tempString}%
+                \@latex@warning{\tempString}%
+            \endgroup%
+        }%
+    }
+    % Overriding command definition.
+    \newcommand*{\laterDef}[2]{\protected@write\@auxout{}{\gdef\string#1{#2}}}
+    \newcommand*{\laterEdef}[2]{%
+        \begingroup%
+            \edef\tempString{#2}%
+            \protected@write\@auxout{}{\gdef\string#1{\tempString}}%
+        \endgroup%
+    }
+    \makeatother
+
     % Obtain current head number.
     \newcommand*{\getTitleNum}{% "%" comments out the line-break
         \ifthenelse{\arabic{chapter}=0}{\thepart}{%
@@ -15,8 +39,6 @@
             }%
         }%
     }
-    % new color for \textcolor command
-    \definecolor{darkpastelgreen}{rgb}{0.01, 0.75, 0.24}
 
     % Escape underscore.
     % ---------- (deprecated at 2024-01-18) ----------
@@ -28,6 +50,9 @@
     % ---------- (added at 2024-01-18) ----------
     \newcommand{\escapeUnderscore}[1]{\StrSubstitute{#1}{_}{\_\allowbreak}} % \allowbreak prevents overfull at table cell.
     % --------------------
+
+    % new color for \textcolor command
+    \definecolor{darkpastelgreen}{rgb}{0.01, 0.75, 0.24}
 
 % 自然科学
     % 汎用

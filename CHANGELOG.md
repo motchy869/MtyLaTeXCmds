@@ -12,7 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Improved:
   - Now `escapeUnderscore` command prevents overfull hbox at the table cell.
 - Added:
-  - `transpose`, `HerConj` command
+  - `transpose`, `HerConj` commands
+  - `rsvDef`, `laterDef`, `laterEdef` commands
+    - The LAST definition of the command is applied across ALL pages.
 
 ## [0.12.0] - 2023-07-07
 
