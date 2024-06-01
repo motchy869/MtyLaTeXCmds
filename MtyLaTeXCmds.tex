@@ -8,6 +8,7 @@
     % see [Using later defined macro values](https://tex.stackexchange.com/questions/248076/using-later-defined-macro-values)
     \makeatletter
     % Reserve command name. The command must be pre-defined in advance of first use.
+    % If you split the document into multiple files, you must put \rsvDef command in EACH of the file which refers the later-defined command.
     \newcommand*{\rsvDef}[1]{%
         \providecommand{#1}{%
             \begingroup%
@@ -166,7 +167,7 @@
         \newcommand*{\ErlangDist}[2]{\operatorname{ErlangDist}\parens*{#1,#2}}
         \newcommand*{\PoissonDist}[1]{\operatorname{PoissonDist}\parens*{#1}}
         \newcommand*{\GammaDist}[2]{\operatorname{Gamma}\parens*{#1,#2}}
-        \newcommand*{\cind}[2]{\ind{#1\left| #2\right.}}	%条件付き指示関数
+        \newcommand*{\cind}[2]{\ind{#1\left| #2\right.}} % 条件付き指示関数
         \providecommand{\Pr}{}\renewcommand{\Pr}[1]{\operatorname{Pr}\parens*{#1}}
         \DeclarePairedDelimiterX{\cPrParens}[2]{(}{)}{#1\,\delimsize\vert\,#2}
         \newcommand*{\cPr}[2]{\operatorname{Pr}\cPrParens{#1}{#2}}

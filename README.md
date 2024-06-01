@@ -1,3 +1,3 @@
-# LaTeX-motchyMacros
+# MtyLaTeXCmds
 
-My LaTeX macros used in my projects.
+My LaTeX commands used in my projects.
