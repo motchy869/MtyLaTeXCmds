@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Changed:
   - Remove arguments from the commands: `sgn`, `rect`, `asin`, `acos`, `atan`, `Arg` and `Log` so that they can be used as an argument of functional.
+  - Changed functions defined as `\mathop{\mathrm{xxx}}` to `\operatorname{xxx}`.
 - Added:
   - functions for fixed-point arithmetic: `IntPartBW`, `DecPartBW`, `TotalBW`, `Rat`
 
