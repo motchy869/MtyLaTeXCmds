@@ -13,6 +13,7 @@
         "mathtools",
         "Paren",
         "Parens",
-        "renewcommand"
+        "renewcommand",
+        "underbracket"
     ]
 }
