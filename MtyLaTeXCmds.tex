@@ -55,12 +55,12 @@
     % new color for \textcolor command
     \definecolor{darkpastelgreen}{rgb}{0.01, 0.75, 0.24}
 
-% 自然科学
-    % 汎用
+% natural science
+    % general purpose
     \newcommand*{\ctext}[1]{\raise0.2ex\hbox{\textcircled{\scriptsize{#1}}}}
 
-    % 数学
-        % 汎用
+    % mathematics
+        % general purpose
         \DeclarePairedDelimiterX{\parens}[1]{\lparen}{\rparen}{#1}
         \DeclarePairedDelimiterX{\braces}[1]{\lbrace}{\rbrace}{#1}
         \DeclarePairedDelimiterX{\bracks}[1]{\lbrack}{\rbrack}{#1}
@@ -76,70 +76,70 @@
         \newcommand*{\complexNumbers}{\mathbb{C}}
         \newcommand*{\field}{\mathbb{F}}
         \newcommand*{\func}[2]{{#1}\parens*{#2}}
-        \newcommand*{\argmax}{\mathop{\textrm{arg~max}}}
-        \newcommand*{\argmin}{\mathop{\textrm{arg~min}}}
+        \newcommand*{\argmax}{\operatorname*{arg~max}}
+        \newcommand*{\argmin}{\operatorname*{arg~min}}
 
-        % 集合論
+        % set theory
         \newcommand*{\range}[2]{\braces*{#1,\dotsc,#2}}
         \providecommand{\complement}{}\renewcommand{\complement}{\mathrm{c}}
         \newcommand*{\ind}[2]{\mathbbm{1}_{#1}\parens*{#2}}
         \newcommand*{\indII}[1]{\mathbbm{1}\braces*{#1}}
 
-        % 数論
+        % number theory
         \newcommand*{\abs}[1]{\verts*{#1}}
         \newcommand*{\combi}[2]{{_{#1}\mathrm{C}_{#2}}}
         \newcommand*{\perm}[2]{{_{#1}\mathrm{P}_{#2}}}
         \newcommand*{\GaloisField}[1]{\mathrm{GF}\parens*{#1}}
 
-        % 解析学
+        % analysis
         \newcommand*{\NapierE}{\mathrm{e}}
-        \newcommand*{\sgn}[1]{\operatorname{sgn}\parens*{#1}}
-        \newcommand*{\rect}[1]{\mathop{\mathrm{rect}}\parens*{#1}}
+        \newcommand*{\sgn}{\operatorname{sgn}}
+        \newcommand*{\rect}{\operatorname{rect}}
         \newcommand*{\cl}[1]{\operatorname{cl}#1}
         \newcommand*{\Img}[1]{\operatorname{Img}\parens*{#1}}
         \newcommand*{\dom}[1]{\operatorname{dom}\parens*{#1}}
         \newcommand*{\norm}[1]{\Verts*{#1}}
         \newcommand*{\floor}[1]{\left\lfloor#1\right\rfloor}
         \newcommand*{\ceil}[1]{\left\lceil#1\right\rceil}
-        \newcommand*{\sinc}{\mathop{\mathrm{sinc}}}
-        \newcommand*{\nsinc}{\mathop{\mathrm{nsinc}}}
+        \newcommand*{\sinc}{\operatorname{sinc}}
+        \newcommand*{\nsinc}{\operatorname{nsinc}}
         \newcommand*{\GammaFunc}[1]{\Gamma\parens*{#1}}
-        \newcommand*{\erf}{\mathop{\mathrm{erf}}}
-            % 逆三角関数
-            \newcommand*{\asin}[1]{\operatorname{Sin}^{-1}{#1}}
-            \newcommand*{\acos}[1]{\operatorname{Cos}^{-1}{#1}}
-            \newcommand*{\atan}[1]{\operatorname{{Tan}^{-1}}{#1}}
+        \newcommand*{\erf}{\operatorname{erf}}
+            % inverse trigonometric function
+            \newcommand*{\asin}{\operatorname{Sin}^{-1}}
+            \newcommand*{\acos}{\operatorname{Cos}^{-1}}
+            \newcommand*{\atan}{\operatorname{Tan}^{-1}}
             \newcommand*{\atanEx}[2]{\atan{\parens*{#1,#2}}}
-            % 畳み込み
+            % convolution
             \newcommand*{\cycConv}[2]{{#1}\underset{\text{cyc}}{*}{#2}}
-            % 微分
+            % derivative
             \newcommand*{\deriv}[3]{\frac{\operatorname{d}^{#3}#1}{\operatorname{d}{#2}^{#3}}}
             \newcommand*{\derivLong}[3]{\frac{\operatorname{d}^{#3}}{\operatorname{d}{#2}^{#3}}#1}
             \newcommand*{\partDeriv}[3]{\frac{\operatorname{\partial}^{#3}#1}{\operatorname{\partial}{#2}^{#3}}}
             \newcommand*{\partDerivLong}[3]{\frac{\operatorname{\partial}^{#3}}{\operatorname{\partial}{#2}^{#3}}#1}
             \newcommand*{\partDerivIIHetero}[3]{\frac{\operatorname{\partial}^2#1}{\partial#2\operatorname{\partial}#3}}
             \newcommand*{\partDerivIIHeteroLong}[3]{{\frac{\operatorname{\partial}^2}{\partial#2\operatorname{\partial}#3}#1}}
-            % 積分
+            % integral
             \newcommand*{\PrincipalValue}{\mathrm{p.v.}}
             \newcommand*{\integrate}[5]{\int_{#1}^{#2}{#3}{\mathrm{d}^{#4}}#5}
             \newcommand*{\LebInteg}[4]{\int_{#1} {#2} {#3}\parens*{\mathrm{d}#4}}
 
-        % 複素解析
+        % complex analysis
         \newcommand*{\conj}[1]{\overline{#1}}
         \providecommand{\Re}{}\renewcommand{\Re}[1]{{\operatorname{Re}{\parens*{#1}}}}
         \providecommand{\Im}{}\renewcommand{\Im}[1]{{\operatorname{Im}{\parens*{#1}}}}
-        \newcommand*{\Arg}[1]{\operatorname{Arg}{\parens*{#1}}}
-        \newcommand*{\Log}[1]{\operatorname{Log}{#1}}
-            % Laplace 変換
+        \newcommand*{\Arg}{\operatorname{Arg}}
+        \newcommand*{\Log}{\operatorname{Log}}
+            % Laplace transform
             \newcommand*{\LPLC}[1]{\operatorname{\mathcal{L}}\parens*{#1}}
             \newcommand*{\ILPLC}[1]{\operatorname{\mathcal{L}}^{-1}\parens*{#1}}
-            % 離散 Fourier 変換
+            % discrete fourier transform
             \newcommand*{\DFT}[1]{\mathrm{DFT}\parens*{#1}}
-            % Z 変換
+            % Z-transform
             \newcommand*{\ZTrans}[1]{\operatorname{\mathcal{Z}}\parens*{#1}}
             \newcommand*{\IZTrans}[1]{\operatorname{\mathcal{Z}}^{-1}\parens*{#1}}
 
-        % 線形代数
+        % linear algebra
         \newcommand*{\bm}[1]{{\boldsymbol{#1}}}
         \newcommand*{\matEntry}[3]{#1\bracks*{#2}\bracks*{#3}}
         \newcommand*{\matPart}[5]{\matEntry{#1}{#2:#3}{#4:#5}}
@@ -153,13 +153,13 @@
         \newcommand*{\Span}[1]{\operatorname{span}\bracks*{#1}}
         \newcommand*{\Ker}[1]{\operatorname{Ker}\parens*{#1}}
         \newcommand*{\rank}[1]{\operatorname{rank}\parens*{#1}}
-            % ベクトル
-                % 単位ベクトル
+            % vector
+                % unit vector
                 \newcommand*{\vix}{\bm{i}_x}
                 \newcommand*{\viy}{\bm{i}_y}
                 \newcommand*{\viz}{\bm{i}_z}
 
-        % 確率論
+        % probability theory
         \newcommand*{\PDF}[2]{\operatorname{PDF}\bracks*{#1,\;#2}}
         \newcommand*{\Ber}[1]{\operatorname{Ber}\parens*{#1}}
         \newcommand*{\Beta}[2]{\operatorname{Beta}\parens*{#1,#2}}
@@ -167,7 +167,7 @@
         \newcommand*{\ErlangDist}[2]{\operatorname{ErlangDist}\parens*{#1,#2}}
         \newcommand*{\PoissonDist}[1]{\operatorname{PoissonDist}\parens*{#1}}
         \newcommand*{\GammaDist}[2]{\operatorname{Gamma}\parens*{#1,#2}}
-        \newcommand*{\cind}[2]{\ind{#1\left| #2\right.}} % 条件付き指示関数
+        \newcommand*{\cind}[2]{\ind{#1\left| #2\right.}} % conditional indicator function
         \providecommand{\Pr}{}\renewcommand{\Pr}[1]{\operatorname{Pr}\parens*{#1}}
         \DeclarePairedDelimiterX{\cPrParens}[2]{(}{)}{#1\,\delimsize\vert\,#2}
         \newcommand*{\cPr}[2]{\operatorname{Pr}\cPrParens{#1}{#2}}
@@ -177,15 +177,21 @@
         \newcommand*{\Cov}[2]{\operatorname{Cov}\bracks*{#1,#2}}
         \newcommand*{\CovMat}[1]{\operatorname{Cov}\bracks*{#1}}
 
-        % グラフ理論
+        % graph theory
         \newcommand*{\neighborhood}{\mathcal{N}}
 
-    % プログラミング
-    \newcommand*{\plpl}{\mathrel{++}}
-    \newcommand*{\pleq}{\mathrel{+}=}
-    \newcommand*{\asteq}{\mathrel{*}=}
-    \ifluatex
-        \newcommand*{\inlineCode}[1]{\lstinline[basicstyle=\ttfamily]|#1|}
-    \else
-        \newcommand*{\inlineCode}[1]{\lstinline[inputencoding=utf8, basicstyle=\ttfamily]|#1|}
-    \fi
+    % computer science
+        % fixed-point arithmetic
+        \newcommand{\IntPartBW}[1]{\underbracket[0.140ex]{#1}_\text{i}} % 0.140ex is half of the default thickness. See: [How to make underbracket thinner](https://tex.stackexchange.com/questions/559078/how-to-make-underbracket-thinner)
+        \newcommand{\DecPartBW}[1]{\underbracket[0.140ex]{#1}_\text{d}}
+        \newcommand{\TotalBW}[1]{\underbracket[0.140ex]{#1}}
+        \newcommand{\Rat}[1]{\operatorname{Rat}\parens*{#1}} % Maps a fixed-point number to a corresponding rational number.
+        % programming
+        \newcommand*{\plpl}{\mathrel{++}}
+        \newcommand*{\pleq}{\mathrel{+}=}
+        \newcommand*{\asteq}{\mathrel{*}=}
+        \ifluatex
+            \newcommand*{\inlineCode}[1]{\lstinline[basicstyle=\ttfamily]|#1|}
+        \else
+            \newcommand*{\inlineCode}[1]{\lstinline[inputencoding=utf8, basicstyle=\ttfamily]|#1|}
+        \fi
