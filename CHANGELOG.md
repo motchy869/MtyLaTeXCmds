@@ -10,7 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Deleted:
   - `PrincipalValue` command
 - Added:
-  - `pv` command for principal value
+  - `pv` for principal value
+  - `IDFT`
 
 ## [0.15.0] - 2024-09-24
 
