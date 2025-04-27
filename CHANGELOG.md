@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 - Deleted:
-  - `PrincipalValue` command
+  - `PrincipalValue`, `cycConv` commands
 - Added:
   - `pv` for principal value
   - new commands: `IDFT`, `SSZTrans`, `DTFT`, `IDTFT`
