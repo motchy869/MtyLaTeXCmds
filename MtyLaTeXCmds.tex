@@ -75,6 +75,7 @@
         \newcommand*{\realNumbers}{\mathbb{R}}
         \newcommand*{\complexNumbers}{\mathbb{C}}
         \newcommand*{\field}{\mathbb{F}}
+        \newcommand*{\EuclideanSpace}{\mathbb{E}}
         \newcommand*{\func}[2]{{#1}\parens*{#2}}
         \newcommand*{\argmax}{\operatorname*{arg~max}}
         \newcommand*{\argmin}{\operatorname*{arg~min}}
@@ -91,13 +92,14 @@
         \newcommand*{\perm}[2]{{_{#1}\mathrm{P}_{#2}}}
         \newcommand*{\GaloisField}[1]{\mathrm{GF}\parens*{#1}}
 
-        % analysis
+        % real analysis
         \newcommand*{\NapierE}{\mathrm{e}}
         \newcommand*{\sgn}{\operatorname{sgn}}
         \newcommand*{\rect}{\operatorname{rect}}
         \newcommand*{\cl}[1]{\operatorname{cl}#1}
         \newcommand*{\Img}[1]{\operatorname{Img}\parens*{#1}}
         \newcommand*{\dom}[1]{\operatorname{dom}\parens*{#1}}
+        \newcommand*{\LittleO}[2]{\underset{#1}{o}\parens*{#2}}
         \newcommand*{\norm}[1]{\Verts*{#1}}
         \newcommand*{\floor}[1]{\left\lfloor#1\right\rfloor}
         \newcommand*{\ceil}[1]{\left\lceil#1\right\rceil}
@@ -110,8 +112,6 @@
             \newcommand*{\acos}{\operatorname{Cos}^{-1}}
             \newcommand*{\atan}{\operatorname{Tan}^{-1}}
             \newcommand*{\atanEx}[2]{\atan{\parens*{#1,#2}}}
-            % convolution
-            \newcommand*{\cycConv}[2]{{#1}\underset{\text{cyc}}{*}{#2}}
             % derivative
             \newcommand*{\deriv}[3]{\frac{\operatorname{d}^{#3}#1}{\operatorname{d}{#2}^{#3}}}
             \newcommand*{\derivLong}[3]{\frac{\operatorname{d}^{#3}}{\operatorname{d}{#2}^{#3}}#1}
@@ -120,7 +120,7 @@
             \newcommand*{\partDerivIIHetero}[3]{\frac{\operatorname{\partial}^2#1}{\partial#2\operatorname{\partial}#3}}
             \newcommand*{\partDerivIIHeteroLong}[3]{{\frac{\operatorname{\partial}^2}{\partial#2\operatorname{\partial}#3}#1}}
             % integral
-            \newcommand*{\PrincipalValue}{\mathrm{p.v.}}
+            \newcommand*{\pv}{{\textrm{ p.v. }}}
             \newcommand*{\integrate}[5]{\int_{#1}^{#2}{#3}{\mathrm{d}^{#4}}#5}
             \newcommand*{\LebInteg}[4]{\int_{#1} {#2} {#3}\parens*{\mathrm{d}#4}}
 
@@ -135,9 +135,11 @@
             \newcommand*{\ILPLC}[1]{\operatorname{\mathcal{L}}^{-1}\parens*{#1}}
             % discrete fourier transform
             \newcommand*{\DFT}[1]{\mathrm{DFT}\parens*{#1}}
+            \newcommand*{\IDFT}[1]{\mathrm{IDFT}\parens*{#1}}
             % Z-transform
             \newcommand*{\ZTrans}[1]{\operatorname{\mathcal{Z}}\parens*{#1}}
             \newcommand*{\IZTrans}[1]{\operatorname{\mathcal{Z}}^{-1}\parens*{#1}}
+            \newcommand*{\SSZTrans}[1]{\underset{\text{s.s.}}{\mathcal{Z}}\parens*{#1}} % single-sided Z-transform
 
         % linear algebra
         \newcommand*{\bm}[1]{{\boldsymbol{#1}}}
@@ -159,33 +161,44 @@
                 \newcommand*{\viy}{\bm{i}_y}
                 \newcommand*{\viz}{\bm{i}_z}
 
-        % probability theory
-        \newcommand*{\PDF}[2]{\operatorname{PDF}\bracks*{#1,\;#2}}
-        \newcommand*{\Ber}[1]{\operatorname{Ber}\parens*{#1}}
-        \newcommand*{\Beta}[2]{\operatorname{Beta}\parens*{#1,#2}}
-        \newcommand*{\ExpDist}[1]{\operatorname{ExpDist}\parens*{#1}}
-        \newcommand*{\ErlangDist}[2]{\operatorname{ErlangDist}\parens*{#1,#2}}
-        \newcommand*{\PoissonDist}[1]{\operatorname{PoissonDist}\parens*{#1}}
-        \newcommand*{\GammaDist}[2]{\operatorname{Gamma}\parens*{#1,#2}}
-        \newcommand*{\cind}[2]{\ind{#1\left| #2\right.}} % conditional indicator function
-        \providecommand{\Pr}{}\renewcommand{\Pr}[1]{\operatorname{Pr}\parens*{#1}}
-        \DeclarePairedDelimiterX{\cPrParens}[2]{(}{)}{#1\,\delimsize\vert\,#2}
-        \newcommand*{\cPr}[2]{\operatorname{Pr}\cPrParens{#1}{#2}}
-        \newcommand*{\E}[2]{\operatorname{E}_{#1}\bracks*{#2}}
-        \newcommand*{\cE}[3]{\E{#1}{\left.#2\right|#3}}
-        \newcommand*{\Var}[2]{\operatorname{Var}_{#1}\bracks*{#2}}
-        \newcommand*{\Cov}[2]{\operatorname{Cov}\bracks*{#1,#2}}
-        \newcommand*{\CovMat}[1]{\operatorname{Cov}\bracks*{#1}}
-
         % graph theory
         \newcommand*{\neighborhood}{\mathcal{N}}
 
+    % probability theory
+    \newcommand*{\PDF}[2]{\operatorname{PDF}\bracks*{#1,#2}}
+    \newcommand*{\Ber}[1]{\operatorname{Ber}\parens*{#1}}
+    \newcommand*{\Beta}[2]{\operatorname{Beta}\parens*{#1,#2}}
+    \newcommand*{\ExpDist}[1]{\operatorname{ExpDist}\parens*{#1}}
+    \newcommand*{\ErlangDist}[2]{\operatorname{ErlangDist}\parens*{#1,#2}}
+    \newcommand*{\PoissonDist}[1]{\operatorname{PoissonDist}\parens*{#1}}
+    \newcommand*{\GammaDist}[2]{\operatorname{Gamma}\parens*{#1,#2}}
+    \newcommand*{\cind}[2]{\ind{#1\left| #2\right.}} % conditional indicator function
+    \providecommand{\Pr}{}\renewcommand{\Pr}[1]{\operatorname{Pr}\parens*{#1}}
+    \DeclarePairedDelimiterX{\cPrParens}[2]{(}{)}{#1\,\delimsize\vert\,#2}
+    \newcommand*{\cPr}[2]{\operatorname{Pr}\cPrParens{#1}{#2}}
+    \newcommand*{\E}[2]{\operatorname{E}_{#1}\bracks*{#2}}
+    \newcommand*{\cE}[3]{\E{#1}{\left.#2\right|#3}}
+    \newcommand*{\Var}[2]{\operatorname{Var}_{#1}\bracks*{#2}}
+    \newcommand*{\Cov}[2]{\operatorname{Cov}\bracks*{#1,#2}}
+    \newcommand*{\CovMat}[1]{\operatorname{Cov}\bracks*{#1}}
+
+    % physics
+        % unit of measurement
+        \providecommand{\second}{\text{s}}
+        \providecommand{\hertz}{\text{Hz}}
+        \providecommand{\decibel}{\text{dB}}
+
+    % signal processing
+        % Discrete Time Fourier Transform
+        \newcommand*{\DTFT}[1]{\mathrm{DTFT}\parens*{#1}}
+        \newcommand*{\IDTFT}[1]{\mathrm{IDTFT}\parens*{#1}}
+
     % computer science
         % fixed-point arithmetic
-        \newcommand{\IntPartBW}[1]{\underbracket[0.140ex]{#1}_\text{i}} % 0.140ex is half of the default thickness. See: [How to make underbracket thinner](https://tex.stackexchange.com/questions/559078/how-to-make-underbracket-thinner)
-        \newcommand{\DecPartBW}[1]{\underbracket[0.140ex]{#1}_\text{d}}
-        \newcommand{\TotalBW}[1]{\underbracket[0.140ex]{#1}}
-        \newcommand{\Rat}[1]{\operatorname{Rat}\parens*{#1}} % Maps a fixed-point number to a corresponding rational number.
+        \newcommand*{\IntPartBW}[1]{\underbracket[0.140ex]{#1}_\text{i}} % 0.140ex is half of the default thickness. See: [How to make underbracket thinner](https://tex.stackexchange.com/questions/559078/how-to-make-underbracket-thinner)
+        \newcommand*{\DecPartBW}[1]{\underbracket[0.140ex]{#1}_\text{d}}
+        \newcommand*{\TotalBW}[1]{\underbracket[0.140ex]{#1}}
+        \newcommand*{\Rat}[1]{\operatorname{Rat}\parens*{#1}} % Maps a fixed-point number to a corresponding rational number.
         % programming
         \newcommand*{\plpl}{\mathrel{++}}
         \newcommand*{\pleq}{\mathrel{+}=}
