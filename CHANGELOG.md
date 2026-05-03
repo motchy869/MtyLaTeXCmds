@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `PrincipalValue`, `cycConv` commands
 - Added:
   - `pv` for principal value
-  - new commands: `IDFT`, `SSZTrans`, `DTFT`, `IDTFT`
+  - new commands: `EuclideanSpace`, `IDFT`, `SSZTrans`, `DTFT`, `IDTFT`
   - unit of measurements: s, Hz, dB
 
 ## [0.15.0] - 2024-09-24
