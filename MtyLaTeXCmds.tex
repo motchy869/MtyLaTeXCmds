@@ -179,8 +179,8 @@
     \providecommand{\Pr}{}\renewcommand{\Pr}[1]{\operatorname{Pr}\parens*{#1}}
     \DeclarePairedDelimiterX{\cPrParens}[2]{(}{)}{#1\,\delimsize\vert\,#2}
     \newcommand*{\cPr}[2]{\operatorname{Pr}\cPrParens{#1}{#2}}
-    \newcommand*{\E}[2]{\operatorname{E}_{#1}\bracks*{#2}}
-    \newcommand*{\cE}[3]{\E{#1}{\left.#2\right|#3}}
+    \newcommand*{\Ev}[2]{\operatorname{E}_{#1}\bracks*{#2}} % expected value
+    \newcommand*{\cE}[3]{\Ev{#1}{\left.#2\right|#3}}
     \newcommand*{\Var}[2]{\operatorname{Var}_{#1}\bracks*{#2}}
     \newcommand*{\Cov}[2]{\operatorname{Cov}\bracks*{#1,#2}}
     \newcommand*{\CovMat}[1]{\operatorname{Cov}\bracks*{#1}}
