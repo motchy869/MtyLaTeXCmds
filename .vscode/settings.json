@@ -5,6 +5,7 @@
         "Cmds",
         "Conv",
         "Edef",
+        "footnoteref",
         "ILPLC",
         "integ",
         "listingsutf",
@@ -14,6 +15,8 @@
         "Paren",
         "Parens",
         "renewcommand",
-        "underbracket"
+        "thefnmark",
+        "underbracket",
+        "xdef"
     ]
 }

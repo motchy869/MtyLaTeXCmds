@@ -9,8 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Changed:
   - `E` -> `Ev` for expected value
+- Deleted:
+  - `escapeUnderscore` command
 - Added:
-  - `nonNegRealNumbers`, `posRealNumbers`, `vecEntry` commands
+  - `footnoteRef`, `robustEscapeUnderscore`, `nonNegRealNumbers`, `posRealNumbers`, `vecEntry` commands
 
 ## [v0.16.0] - 2026-05-03
 
