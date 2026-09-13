@@ -112,12 +112,12 @@
             \newcommand*{\atan}{\operatorname{Tan}^{-1}}
             \newcommand*{\atanEx}[2]{\atan{\parens*{#1,#2}}}
             % derivative
-            \newcommand*{\deriv}[3]{\frac{\operatorname{d}^{#3}#1}{\operatorname{d}{#2}^{#3}}}
-            \newcommand*{\derivLong}[3]{\frac{\operatorname{d}^{#3}}{\operatorname{d}{#2}^{#3}}#1}
-            \newcommand*{\partDeriv}[3]{\frac{\operatorname{\partial}^{#3}#1}{\operatorname{\partial}{#2}^{#3}}}
-            \newcommand*{\partDerivLong}[3]{\frac{\operatorname{\partial}^{#3}}{\operatorname{\partial}{#2}^{#3}}#1}
-            \newcommand*{\partDerivIIHetero}[3]{\frac{\operatorname{\partial}^2#1}{\partial#2\operatorname{\partial}#3}}
-            \newcommand*{\partDerivIIHeteroLong}[3]{{\frac{\operatorname{\partial}^2}{\partial#2\operatorname{\partial}#3}#1}}
+            \newcommand*{\deriv}[3]{\frac{\mathrm{d}^{#3}#1}{\mathrm{d}{#2}^{#3}}}
+            \newcommand*{\derivLong}[3]{\frac{\mathrm{d}^{#3}}{\mathrm{d}{#2}^{#3}}#1}
+            \newcommand*{\partDeriv}[3]{\frac{\mathrm{\partial}^{#3}#1}{\mathrm{\partial}{#2}^{#3}}}
+            \newcommand*{\partDerivLong}[3]{\frac{\mathrm{\partial}^{#3}}{\mathrm{\partial}{#2}^{#3}}#1}
+            \newcommand*{\partDerivIIHetero}[3]{\frac{\mathrm{\partial}^2#1}{\partial#2\mathrm{\partial}#3}}
+            \newcommand*{\partDerivIIHeteroLong}[3]{{\frac{\mathrm{\partial}^2}{\partial#2\mathrm{\partial}#3}#1}}
             % integral
             \newcommand*{\pv}{{\textrm{ p.v. }}}
             \newcommand*{\integrate}[5]{\int_{#1}^{#2}{#3}{\mathrm{d}^{#4}}#5}
