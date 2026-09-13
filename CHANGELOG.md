@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 - Changed:
+  - `inprod` -> `inProd` for inner product
   - `E` -> `Ev` for expected value
 - Deleted:
   - `escapeUnderscore` command
