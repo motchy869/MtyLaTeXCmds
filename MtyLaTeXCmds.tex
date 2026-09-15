@@ -202,7 +202,7 @@
         \newcommand*{\Rat}[1]{\operatorname{Rat}\parens*{#1}} % Maps a fixed-point number to a corresponding rational number.
         % programming
         \newcommand*{\plpl}{\mathrel{++}}
-        \newcommand*{\pleq}{\mathrel{+}=}
+        \newcommand*{\pleq}{\mathrel{+}=} % Keep "+=" tight; \mathrel{+=} would insert a \thickmuskip between + and =.
         \newcommand*{\asteq}{\mathrel{*}=}
         \ifluatex
             \newcommand*{\inlineCode}[1]{\lstinline[basicstyle=\ttfamily]|#1|}
