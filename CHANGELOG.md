@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed:
   - `inprod` -> `inProd` for inner product
   - `E` -> `Ev` for expected value
+  - `Img` -> `img` for image of a function. Rendered like "im(f)".
 - Deleted:
   - `escapeUnderscore` command
 - Added:
