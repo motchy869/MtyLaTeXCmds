@@ -54,7 +54,7 @@
 
 % natural science
     % general purpose
-    \newcommand*{\ctext}[1]{\raise0.2ex\hbox{\textcircled{\scriptsize{#1}}}}
+    \newcommand*{\ctext}[1]{\raise0.2ex\hbox{\textcircled{\scriptsize{#1}}}} % circled text for annotation
 
     % mathematics
         % general purpose
@@ -63,9 +63,9 @@
         \DeclarePairedDelimiterX{\bracks}[1]{\lbrack}{\rbrack}{#1}
         \DeclarePairedDelimiterX{\verts}[1]{|}{|}{#1}
         \DeclarePairedDelimiterX{\Verts}[1]{\|}{\|}{#1}
+        \DeclarePairedDelimiterX{\setComprehension}[2]{\lbrace}{\rbrace}{#1\,\delimsize\vert\,#2}
         \newcommand*{\as}{{\quad\textrm{as}\quad}}
         \newcommand*{\st}{{\textrm{ s.t. }}}
-        \DeclarePairedDelimiterX{\setComprehension}[2]{\lbrace}{\rbrace}{#1\,\delimsize\vert\,#2}
         \newcommand*{\naturalNumbers}{\mathbb{N}}
         \newcommand*{\integers}{\mathbb{Z}}
         \newcommand*{\rationalNumbers}{\mathbb{Q}}
@@ -93,17 +93,17 @@
 
         % real analysis
         \newcommand*{\NapierE}{\mathrm{e}}
-        \newcommand*{\sgn}{\operatorname{sgn}}
-        \newcommand*{\rect}{\operatorname{rect}}
-        \newcommand*{\cl}[1]{\operatorname{cl}#1}
-        \newcommand*{\img}[1]{\operatorname{im}\parens*{#1}}
-        \newcommand*{\dom}[1]{\operatorname{dom}\parens*{#1}}
-        \newcommand*{\LittleO}[2]{\underset{#1}{o}\parens*{#2}}
-        \newcommand*{\norm}[1]{\Verts*{#1}}
+        \newcommand*{\sgn}{\operatorname{sgn}} % sign function
+        \newcommand*{\rect}{\operatorname{rect}} % rectangular function
+        \newcommand*{\cl}[1]{\operatorname{cl}#1} % closure of a set
+        \newcommand*{\img}[1]{\operatorname{im}\parens*{#1}} % image of a function
+        \newcommand*{\dom}[1]{\operatorname{dom}\parens*{#1}} % domain of a function
+        \newcommand*{\LittleO}[2]{\underset{#1}{o}\parens*{#2}} % little-o notation
+        \newcommand*{\norm}[1]{\Verts*{#1}} % norm of a vector or function
         \newcommand*{\floor}[1]{\left\lfloor#1\right\rfloor}
         \newcommand*{\ceil}[1]{\left\lceil#1\right\rceil}
         \newcommand*{\sinc}{\operatorname{sinc}}
-        \newcommand*{\nrmSinc}{\operatorname{nsinc}}
+        \newcommand*{\nrmSinc}{\operatorname{nsinc}} % normalized sinc function
         \newcommand*{\GammaFunc}[1]{\Gamma\parens*{#1}}
         \newcommand*{\erf}{\operatorname{erf}}
             % inverse trigonometric function
