@@ -10,7 +10,7 @@
     % Reserve command name. The command must be pre-defined in advance of first use.
     % If you split the document into multiple files, you must put \rsvDef command in EACH of the file which refers the later-defined command.
     \newcommand*{\rsvDef}[1]{%
-        \providecommand{#1}{%
+        \providecommand*{#1}{%
             \begingroup%
                 \def\tempString{The command `\string#1' is not fully defined in .aux file yet. Compile one more time.}%
                 \textcolor{red}{\tempString}%
@@ -81,7 +81,7 @@
 
         % set theory
         \newcommand*{\range}[2]{\braces*{#1,\dotsc,#2}}
-        \providecommand{\complement}{}\renewcommand{\complement}{\mathrm{c}}
+        \providecommand*{\complement}{}\renewcommand*{\complement}{\mathrm{c}}
         \newcommand*{\ind}[2]{\mathbbm{1}_{#1}\parens*{#2}}
         \newcommand*{\indII}[1]{\mathbbm{1}\braces*{#1}}
 
@@ -125,8 +125,8 @@
 
         % complex analysis
         \newcommand*{\conj}[1]{\overline{#1}}
-        \providecommand{\Re}{}\renewcommand{\Re}[1]{{\operatorname{Re}{\parens*{#1}}}}
-        \providecommand{\Im}{}\renewcommand{\Im}[1]{{\operatorname{Im}{\parens*{#1}}}}
+        \providecommand*{\Re}{}\renewcommand*{\Re}[1]{{\operatorname{Re}{\parens*{#1}}}}
+        \providecommand*{\Im}{}\renewcommand*{\Im}[1]{{\operatorname{Im}{\parens*{#1}}}}
         \newcommand*{\Arg}{\operatorname{Arg}}
         \newcommand*{\Log}{\operatorname{Log}}
             % Laplace transform
@@ -174,7 +174,7 @@
         \newcommand*{\PoissonDist}[1]{\operatorname{PoissonDist}\parens*{#1}}
         \newcommand*{\GammaDist}[2]{\operatorname{Gamma}\parens*{#1,#2}}
         \newcommand*{\cind}[2]{\ind{#1\left| #2\right.}} % conditional indicator function
-        \providecommand{\Pr}{}\renewcommand{\Pr}[1]{\operatorname{Pr}\parens*{#1}}
+        \providecommand*{\Pr}{}\renewcommand*{\Pr}[1]{\operatorname{Pr}\parens*{#1}}
         \DeclarePairedDelimiterX{\cPrParens}[2]{(}{)}{#1\,\delimsize\vert\,#2}
         \newcommand*{\cPr}[2]{\operatorname{Pr}\cPrParens{#1}{#2}}
         \newcommand*{\Ev}[2]{\operatorname{E}_{#1}\bracks*{#2}} % expected value
@@ -185,9 +185,9 @@
 
     % physics
         % unit of measurement
-        \providecommand{\second}{\text{s}}
-        \providecommand{\hertz}{\text{Hz}}
-        \providecommand{\decibel}{\text{dB}}
+        \providecommand*{\second}{\text{s}}
+        \providecommand*{\hertz}{\text{Hz}}
+        \providecommand*{\decibel}{\text{dB}}
 
     % signal processing
         % Discrete Time Fourier Transform
