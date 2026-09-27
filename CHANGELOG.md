@@ -8,14 +8,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 - Changed:
-  - `cl` -> `cl` for closure of a set, now has parentheses around the argument.
   - `inprod` -> `inProd` for inner product
   - `E` -> `Ev` for expected value
   - `Img` -> `img` for image of a function. Rendered like "im(f)".
   - `nsinc` -> `nrmSinc` for normalized sinc function
   - `Span` -> `vecSpan` for the span of a set of vectors
+  - Operator-like commands no longer include argument delimiters; supply delimiters at the call site (`\parens*`, `\bracks*`). Affected commands: `\cl`, `\img`, `\dom`, `\Re`, `\Im`, `\LPLC`, `\ILPLC`, `\DFT`, `\IDFT`, `\ZTrans`, `\IZTrans`, `\SSZTrans`, `\DTFT`, `\IDTFT`, `\diag`, `\tr`, `\vecSpan`, `\rank`, `\spec`, `\GaloisField`, `\Rat`, `\Ber`, `\Beta`, `\ExpDist`, `\ErlangDist`, `\PoissonDist`, `\GammaDist`, `\Pr`, `\PDF`, `\Ev`, `\Var`, `\Cov`.
+  - Merged `\GammaFunc` into `\Gamma`.
+  - Fixed typo: `\PoiswsonDist` -> `\PoissonDist`.
 - Deleted:
-  - `escapeUnderscore`, `Ker` commands
+  - `escapeUnderscore`, `Ker`, `func`, `atanEx`, `cPr`, `cE`, `CovMat` commands
 - Added:
   - `footnoteRef`, `robustEscapeUnderscore`, `nonNegRealNumbers`, `posRealNumbers`, `vecEntry`, `dotProd`, `spec` commands
 

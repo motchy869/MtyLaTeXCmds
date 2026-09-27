@@ -75,7 +75,6 @@
         \newcommand*{\complexNumbers}{\mathbb{C}}
         \newcommand*{\field}{\mathbb{F}}
         \newcommand*{\EuclideanSpace}{\mathbb{E}}
-        \newcommand*{\func}[2]{{#1}\parens*{#2}}
         \newcommand*{\argmax}{\operatorname*{arg~max}}
         \newcommand*{\argmin}{\operatorname*{arg~min}}
 
@@ -89,28 +88,26 @@
         \newcommand*{\abs}[1]{\verts*{#1}}
         \newcommand*{\combi}[2]{{_{#1}\mathrm{C}_{#2}}}
         \newcommand*{\perm}[2]{{_{#1}\mathrm{P}_{#2}}}
-        \newcommand*{\GaloisField}[1]{\mathrm{GF}\parens*{#1}}
+        \newcommand*{\GaloisField}{\mathrm{GF}}
 
         % real analysis
         \newcommand*{\NapierE}{\mathrm{e}}
         \newcommand*{\sgn}{\operatorname{sgn}} % sign function
         \newcommand*{\rect}{\operatorname{rect}} % rectangular function
-        \newcommand*{\cl}[1]{\operatorname{cl}\parens*{#1}} % closure of a set
-        \newcommand*{\img}[1]{\operatorname{im}\parens*{#1}} % image of a function
-        \newcommand*{\dom}[1]{\operatorname{dom}\parens*{#1}} % domain of a function
+        \newcommand*{\cl}{\operatorname{cl}} % closure of a set
+        \newcommand*{\img}{\operatorname{im}} % image of a function
+        \newcommand*{\dom}{\operatorname{dom}} % domain of a function
         \newcommand*{\LittleO}[2]{\underset{#1}{o}\parens*{#2}} % little-o notation
         \newcommand*{\norm}[1]{\Verts*{#1}} % norm of a vector or function
         \newcommand*{\floor}[1]{\left\lfloor #1\right\rfloor}
         \newcommand*{\ceil}[1]{\left\lceil#1\right\rceil}
         \newcommand*{\sinc}{\operatorname{sinc}}
         \newcommand*{\nrmSinc}{\operatorname{nsinc}} % normalized sinc function
-        \newcommand*{\GammaFunc}[1]{\Gamma\parens*{#1}}
         \newcommand*{\erf}{\operatorname{erf}}
             % inverse trigonometric function
             \newcommand*{\asin}{\operatorname{Sin}^{-1}}
             \newcommand*{\acos}{\operatorname{Cos}^{-1}}
             \newcommand*{\atan}{\operatorname{Tan}^{-1}}
-            \newcommand*{\atanEx}[2]{\atan{\parens*{#1,#2}}}
             % derivative
             \newcommand*{\deriv}[3]{\frac{\mathrm{d}^{#3}#1}{\mathrm{d}{#2}^{#3}}}
             \newcommand*{\derivLong}[3]{\frac{\mathrm{d}^{#3}}{\mathrm{d}{#2}^{#3}}#1}
@@ -125,37 +122,37 @@
 
         % complex analysis
         \newcommand*{\conj}[1]{\overline{#1}}
-        \providecommand*{\Re}{}\renewcommand*{\Re}[1]{{\operatorname{Re}{\parens*{#1}}}}
-        \providecommand*{\Im}{}\renewcommand*{\Im}[1]{{\operatorname{Im}{\parens*{#1}}}}
+        \providecommand*{\Re}{}\renewcommand*{\Re}{\operatorname{Re}}
+        \providecommand*{\Im}{}\renewcommand*{\Im}{\operatorname{Im}}
         \newcommand*{\Arg}{\operatorname{Arg}}
         \newcommand*{\Log}{\operatorname{Log}}
             % Laplace transform
-            \newcommand*{\LPLC}[1]{\operatorname{\mathcal{L}}\parens*{#1}}
-            \newcommand*{\ILPLC}[1]{\operatorname{\mathcal{L}}^{-1}\parens*{#1}}
+            \newcommand*{\LPLC}{\operatorname{\mathcal{L}}}
+            \newcommand*{\ILPLC}{\operatorname{\mathcal{L}}^{-1}}
             % discrete fourier transform
-            \newcommand*{\DFT}[1]{\mathrm{DFT}\parens*{#1}}
-            \newcommand*{\IDFT}[1]{\mathrm{IDFT}\parens*{#1}}
+            \newcommand*{\DFT}{\operatorname{DFT}}
+            \newcommand*{\IDFT}{\operatorname{IDFT}}
             % Z-transform
-            \newcommand*{\ZTrans}[1]{\operatorname{\mathcal{Z}}\parens*{#1}}
-            \newcommand*{\IZTrans}[1]{\operatorname{\mathcal{Z}}^{-1}\parens*{#1}}
-            \newcommand*{\SSZTrans}[1]{\underset{\text{s.s.}}{\mathcal{Z}}\parens*{#1}} % single-sided Z-transform
+            \newcommand*{\ZTrans}{\operatorname{\mathcal{Z}}}
+            \newcommand*{\IZTrans}{\operatorname{\mathcal{Z}}^{-1}}
+            \newcommand*{\SSZTrans}{\underset{\text{s.s.}}{\mathcal{Z}}} % single-sided Z-transform
 
         % linear algebra
         \newcommand*{\bm}[1]{{\boldsymbol{#1}}}
         \newcommand*{\vecEntry}[2]{\bm{#1}\bracks*{#2}}
         \newcommand*{\matEntry}[3]{#1\bracks*{#2}\bracks*{#3}}
         \newcommand*{\matPart}[5]{\matEntry{#1}{#2:#3}{#4:#5}}
-        \newcommand*{\diag}[1]{\operatorname{diag}\parens*{#1}}
+        \newcommand*{\diag}{\operatorname{diag}}
         \newcommand*{\transpose}[1]{{#1}^\top}
         \newcommand*{\HerConj}[1]{{#1}^*}
-        \newcommand*{\tr}[1]{\operatorname{tr}{\parens*{#1}}}
+        \newcommand*{\tr}{\operatorname{tr}}
         \newcommand*{\inProd}[2]{\left\langle#1,#2\right\rangle}
         \newcommand*{\dotProd}[2]{#1 \cdot #2}
         \newcommand*{\HadamardProd}{\odot}
         \newcommand*{\HadamardDiv}{\oslash}
-        \newcommand*{\vecSpan}[1]{\operatorname{span}\bracks*{#1}}
-        \newcommand*{\rank}[1]{\operatorname{rank}\parens*{#1}}
-        \newcommand*{\spec}[1]{\operatorname{spec}\parens*{#1}}
+        \newcommand*{\vecSpan}{\operatorname{span}}
+        \newcommand*{\rank}{\operatorname{rank}}
+        \newcommand*{\spec}{\operatorname{spec}}
             % vector
                 % unit vector
                 \newcommand*{\vix}{\bm{i}_x}
@@ -166,22 +163,19 @@
         \newcommand*{\neighborhood}{\mathcal{N}}
 
     % probability theory
-        \newcommand*{\PDF}[2]{\operatorname{PDF}\bracks*{#1,#2}}
-        \newcommand*{\Ber}[1]{\operatorname{Ber}\parens*{#1}}
-        \newcommand*{\Beta}[2]{\operatorname{Beta}\parens*{#1,#2}}
-        \newcommand*{\ExpDist}[1]{\operatorname{ExpDist}\parens*{#1}}
-        \newcommand*{\ErlangDist}[2]{\operatorname{ErlangDist}\parens*{#1,#2}}
-        \newcommand*{\PoissonDist}[1]{\operatorname{PoissonDist}\parens*{#1}}
-        \newcommand*{\GammaDist}[2]{\operatorname{Gamma}\parens*{#1,#2}}
+        \newcommand*{\PDF}{\operatorname{PDF}}
+        \newcommand*{\Ber}{\operatorname{Ber}}
+        \newcommand*{\Beta}{\operatorname{Beta}}
+        \newcommand*{\ExpDist}{\operatorname{ExpDist}}
+        \newcommand*{\ErlangDist}{\operatorname{ErlangDist}}
+        \newcommand*{\PoissonDist}{\operatorname{PoissonDist}}
+        \newcommand*{\GammaDist}{\operatorname{Gamma}}
         \newcommand*{\cind}[2]{\ind{#1\left| #2\right.}} % conditional indicator function
-        \providecommand*{\Pr}{}\renewcommand*{\Pr}[1]{\operatorname{Pr}\parens*{#1}}
+        \providecommand*{\Pr}{}\renewcommand*{\Pr}{\operatorname{Pr}}
         \DeclarePairedDelimiterX{\cPrParens}[2]{(}{)}{#1\,\delimsize\vert\,#2}
-        \newcommand*{\cPr}[2]{\operatorname{Pr}\cPrParens{#1}{#2}}
-        \newcommand*{\Ev}[2]{\operatorname{E}_{#1}\bracks*{#2}} % expected value
-        \newcommand*{\cE}[3]{\Ev{#1}{\left.#2\right|#3}}
-        \newcommand*{\Var}[2]{\operatorname{Var}_{#1}\bracks*{#2}}
-        \newcommand*{\Cov}[2]{\operatorname{Cov}\bracks*{#1,#2}}
-        \newcommand*{\CovMat}[1]{\operatorname{Cov}\bracks*{#1}}
+        \newcommand*{\Ev}{\operatorname{E}} % expected value
+        \newcommand*{\Var}{\operatorname{Var}}
+        \newcommand*{\Cov}{\operatorname{Cov}}
 
     % physics
         % unit of measurement
@@ -191,15 +185,15 @@
 
     % signal processing
         % Discrete Time Fourier Transform
-        \newcommand*{\DTFT}[1]{\mathrm{DTFT}\parens*{#1}}
-        \newcommand*{\IDTFT}[1]{\mathrm{IDTFT}\parens*{#1}}
+        \newcommand*{\DTFT}{\operatorname{DTFT}}
+        \newcommand*{\IDTFT}{\operatorname{IDTFT}}
 
     % computer science
         % fixed-point arithmetic
         \newcommand*{\IntPartBW}[1]{\underbracket[0.140ex]{#1}_\mathrm{i}} % 0.140ex is half of the default thickness. See: [How to make underbracket thinner](https://tex.stackexchange.com/questions/559078/how-to-make-underbracket-thinner)
         \newcommand*{\DecPartBW}[1]{\underbracket[0.140ex]{#1}_\mathrm{d}}
         \newcommand*{\TotalBW}[1]{\underbracket[0.140ex]{#1}}
-        \newcommand*{\Rat}[1]{\operatorname{Rat}\parens*{#1}} % Maps a fixed-point number to a corresponding rational number.
+        \newcommand*{\Rat}{\operatorname{Rat}} % Maps a fixed-point number to a corresponding rational number.
         % programming
         \newcommand*{\plpl}{\mathrel{++}}
         \newcommand*{\pleq}{\mathrel{+}=} % Keep "+=" tight; \mathrel{+=} would insert a \thickmuskip between + and =.
