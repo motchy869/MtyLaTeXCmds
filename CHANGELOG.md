@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 - Changed:
+  - `cl` -> `cl` for closure of a set, now has parentheses around the argument.
   - `inprod` -> `inProd` for inner product
   - `E` -> `Ev` for expected value
   - `Img` -> `img` for image of a function. Rendered like "im(f)".
