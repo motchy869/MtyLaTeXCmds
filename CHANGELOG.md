@@ -19,7 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Deleted:
   - `escapeUnderscore`, `Ker`, `func`, `atanEx`, `cPr`, `cE`, `CovMat` commands
 - Added:
-  - `footnoteRef`, `robustEscapeUnderscore`, `nonNegRealNumbers`, `posRealNumbers`, `vecEntry`, `dotProd`, `spec` commands
+  - `footnoteRef`, `robustEscapeUnderscore`, `nonNegRealNumbers`, `posRealNumbers`, `vecEntry`, `dotProd`, `spec`, `minor` commands
 
 ## [v0.16.0] - 2026-05-03
 
