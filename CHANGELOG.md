@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `Img` -> `img` for image of a function. Rendered like "im(f)".
   - `nsinc` -> `nrmSinc` for normalized sinc function
 - Deleted:
-  - `escapeUnderscore` command
+  - `escapeUnderscore`, `Ker` commands
 - Added:
   - `footnoteRef`, `robustEscapeUnderscore`, `nonNegRealNumbers`, `posRealNumbers`, `vecEntry`, `dotProd`, `spec` commands
 
