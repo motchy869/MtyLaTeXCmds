@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.17.0] - 2026-11-02
 
 - Changed:
   - `inprod` -> `inProd` for inner product
@@ -15,13 +15,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `Span` -> `vecSpan` for the span of a set of vectors
   - Operator-like commands no longer include argument delimiters; supply delimiters at the call site (`\parens*`, `\bracks*`). Affected commands: `\cl`, `\img`, `\dom`, `\Re`, `\Im`, `\LPLC`, `\ILPLC`, `\DFT`, `\IDFT`, `\ZTrans`, `\IZTrans`, `\SSZTrans`, `\DTFT`, `\IDTFT`, `\diag`, `\tr`, `\vecSpan`, `\rank`, `\spec`, `\GaloisField`, `\Rat`, `\Ber`, `\Beta`, `\ExpDist`, `\ErlangDist`, `\PoissonDist`, `\GammaDist`, `\Pr`, `\PDF`, `\Ev`, `\Var`, `\Cov`.
   - Merged `\GammaFunc` into `\Gamma`.
-  - Fixed typo: `\PoiswsonDist` -> `\PoissonDist`.
+  - Fixed typo: `\PoissonDist` -> `\PoissonDist`.
 - Deleted:
   - `escapeUnderscore`, `Ker`, `func`, `atanEx`, `cPr`, `cE`, `CovMat` commands
 - Added:
   - `footnoteRef`, `robustEscapeUnderscore`, `nonNegRealNumbers`, `posRealNumbers`, `vecEntry`, `minor`, `dotProd`, `spec`, `xProdMat` commands
 
-## [v0.16.0] - 2026-05-03
+## [0.16.0] - 2026-05-03
 
 - Deleted:
   - `PrincipalValue`, `cycConv` commands
