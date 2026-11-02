@@ -5,15 +5,20 @@
         "Cmds",
         "Conv",
         "Edef",
+        "footnoteref",
         "ILPLC",
+        "inprod",
         "integ",
         "listingsutf",
         "LPLC",
         "mathoperator",
         "mathtools",
+        "nsinc",
         "Paren",
         "Parens",
         "renewcommand",
-        "underbracket"
+        "thefnmark",
+        "underbracket",
+        "xdef"
     ]
 }
